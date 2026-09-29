@@ -1,0 +1,17 @@
+**/bin/
+**/obj/
+.vs/
+.idea/
+.env
+.env.*
+*.user
+*.suo
+*.pem
+*.pfx
+*.p12
+*.key
+*.db
+*.sqlite*
+__pycache__/
+*.pyc
+artifacts/

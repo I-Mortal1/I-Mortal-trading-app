@@ -1,0 +1,28 @@
+{
+  "components": [
+    {
+      "path": "src/I-Mortal.Security/AlgorithmPolicy/IUserDeviceProofOfPossessionSignatureAlgorithmAllowlist.cs",
+      "sha256": "99b80cc394412ba783738ce612c16d597de2fa7bd9b540f457d8f90df14744ff"
+    },
+    {
+      "path": "src/I-Mortal.Security/AlgorithmPolicy/UserDeviceProofOfPossessionSignatureAlgorithmAllowlist.cs",
+      "sha256": "58b3dfdb670ad7398015b9358f8917b958cf2b1daf005d6392736357c91b165b"
+    },
+    {
+      "path": "src/I-Mortal.Security/Challenges/UserDeviceProofOfPossessionChallengeData.cs",
+      "sha256": "83d121a66a28c881651ddf39eff9702690f9db9a77def14948c95b83292f470f"
+    },
+    {
+      "path": "src/I-Mortal.Security/Challenges/IUserDeviceProofOfPossessionChallengeCanonicalSerializer.cs",
+      "sha256": "7acdf6e2ce13b45eaf58ec876d7bf96d8ec8e798e55470ca7358f263e43450eb"
+    },
+    {
+      "path": "src/I-Mortal.Security/Challenges/UserDeviceProofOfPossessionChallengeCanonicalSerializer.cs",
+      "sha256": "7747675bc73ec2cb946f529e9355c6a078b1bfa7c077379bd8dadabc39a351fd"
+    },
+    {
+      "path": "src/I-Mortal.Security/Challenges/UserDeviceProofOfPossessionChallengeCanonicalSerializationContract.cs",
+      "sha256": "578e7b146ace3cc6b38f77ce088f095c00e3d0876548e264f83b67a1f621f536"
+    }
+  ]
+}

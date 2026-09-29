@@ -1,0 +1,20 @@
+[
+  ".gitignore",
+  "NuGet.Config",
+  "README.md",
+  "docs/publication-files.json",
+  "docs/publication-scope.md",
+  "docs/source-manifest.json",
+  "src/I-Mortal.Security/AlgorithmPolicy/IUserDeviceProofOfPossessionSignatureAlgorithmAllowlist.cs",
+  "src/I-Mortal.Security/AlgorithmPolicy/UserDeviceProofOfPossessionSignatureAlgorithmAllowlist.cs",
+  "src/I-Mortal.Security/Challenges/IUserDeviceProofOfPossessionChallengeCanonicalSerializer.cs",
+  "src/I-Mortal.Security/Challenges/UserDeviceProofOfPossessionChallengeCanonicalSerializationContract.cs",
+  "src/I-Mortal.Security/Challenges/UserDeviceProofOfPossessionChallengeCanonicalSerializer.cs",
+  "src/I-Mortal.Security/Challenges/UserDeviceProofOfPossessionChallengeData.cs",
+  "src/I-Mortal.Security/I-Mortal.Security.csproj",
+  "tests/AlgorithmPolicy/AlgorithmPolicy.csproj",
+  "tests/AlgorithmPolicy/Program.cs",
+  "tests/Challenges/Challenges.csproj",
+  "tests/Challenges/Program.cs",
+  "tools/check.py"
+]
