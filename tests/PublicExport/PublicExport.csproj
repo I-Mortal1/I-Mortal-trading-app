@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <!-- This harness calls APIs in the executable; it does not launch its apphost. -->
+    <ValidateExecutableReferencesMatchSelfContained>false</ValidateExecutableReferencesMatchSelfContained>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../security-infrastructure/src/I-Mortal.TrustBroker.csproj" AdditionalProperties="SelfContained=false;PublishTrimmed=false;PublishSingleFile=false" />
+  </ItemGroup>
+</Project>

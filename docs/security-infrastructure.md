@@ -1,0 +1,72 @@
+# Inspection findings and validation boundaries
+
+The workspace contains a .NET TrustBroker executable project, its conformance
+project, security contracts, local experiments, audit evidence, compiled binaries
+and an earlier public utility repository. The public export includes all current
+application and conformance `.cs` / `.csproj` files. Backups are excluded.
+
+## Architecture and implementation status
+
+- `RootConfidentialComputeGate` evaluates origin, supported confidential-compute
+  platform, boundary presence, attestation freshness, an injected attestation
+  verifier and measurement policy. Intel TDX / AMD SEV-SNP verification dependencies
+  include interfaces and evidence records; these do not implement a complete
+  vendor attestation service by themselves.
+- `IMortalSecurityUmbrellaRoot` composes confidential-compute, approved workload,
+  user-runtime and developer-custody gates. Its caller must supply production
+  authorization from a separately protected policy. Interfaces and descriptive
+  evidence flags do not themselves establish that trusted provenance.
+- `Program` retains its disabled production switch. `ProductionRuntimeGate`
+  distinguishes contract verification from permission to operate. The sanitized
+  embedded digest is deliberately invalid, and the deployment path is removed.
+- Windows/Linux providers contain hardware detection code. Detection is not
+  attestation. Enrollment, authorization, signing, attestation and revocation
+  methods return disabled-operation results. macOS readiness is incomplete;
+  mobile adapters depend on native evidence producers.
+- Custody, USB/VeraCrypt, project integrity, protected-state durability/recovery,
+  replay and user/device proof-of-possession code includes contracts, interfaces,
+  predicates and serializers. The export preserves their current state; it does
+  not invent storage engines, signature verifiers or trusted hardware producers.
+- Test-only protected-operation seams model behavior with fakes. Passing those
+  tests would not establish production crash consistency or hardware security.
+
+## Verification commands
+
+`python3 tools/check.py` validates the public file inventory and sensitive-value
+patterns, checks the original utility copies against the full source snapshot,
+runs algorithm-policy and byte-exact serialization regression suites, and runs
+public export checks covering invalid trust anchors and disabled provider operations.
+The full application is compiled as a dependency of the public export checks with
+self-contained publishing and trimming disabled. This does not change the archived
+application project definition.
+
+Original conformance files are preserved for source completeness. They include
+Windows-only expectations, private-policy pins, deployment paths, historical red
+tests and an already-excluded earlier enrollment suite. They are not all portable,
+and their successful execution is not claimed. The public checks do not exercise
+real TPMs, Secure Enclaves, TDX/SNP hardware, production storage or trading.
+
+## Maintaining the snapshot
+
+`tools/export-inputs.json` is the reviewed input inventory.
+`security-infrastructure/export-manifest.json` maps every input to an output and
+records only how many values were redacted. `--check` regenerates in memory and
+compares exact bytes, without writing source hashes into the repository.
+
+Update the private implementation first, rerun the export, inspect the public diff
+and execute the public checks. Newly introduced secrets must be removed or moved
+out of source before publication. Never replace missing trust anchors with values
+derived from the very data being authenticated, and never enable production merely
+to make a public example run.
+
+## Validation of this publication
+
+The prepared snapshot contains 239 C# files, two project definitions and 57 design
+templates. Export records show 208 digest redactions, one identity redaction,
+14 path redactions and 18 deployment-field redactions. Application and public
+harness builds completed with zero warnings and errors.
+
+The public checks passed: five exporter regression tests, 31 denial/verification
+behavior checks, 17,972 algorithm input pairs, nine independent serialization
+vectors and 11 rejection cases. Exact regeneration comparison also passed.
+These counts describe this snapshot and should be refreshed after future changes.

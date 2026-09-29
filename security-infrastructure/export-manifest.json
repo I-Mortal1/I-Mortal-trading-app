@@ -1,0 +1,2985 @@
+{
+  "format": 1,
+  "files": [
+    {
+      "source": "security-spec/I_MORTAL_CROSS_PLATFORM_VALIDATION_GATE_V1.conf",
+      "published": "specification-templates/security-spec/I_MORTAL_CROSS_PLATFORM_VALIDATION_GATE_V1.conf.example",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/I_MORTAL_EMAIL_RECOVERY_AUTHORITY_V1.conf",
+      "published": "specification-templates/security-spec/I_MORTAL_EMAIL_RECOVERY_AUTHORITY_V1.conf.example",
+      "redactions": {
+        "digests": 2,
+        "identities": 1,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/I_MORTAL_HARDWARE_BOUND_CRYPTOGRAPHIC_IDENTITY_AND_PROVISIONING_V1.conf",
+      "published": "specification-templates/security-spec/I_MORTAL_HARDWARE_BOUND_CRYPTOGRAPHIC_IDENTITY_AND_PROVISIONING_V1.conf.example",
+      "redactions": {
+        "digests": 5,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/account-authentication-parameters-v1.conf",
+      "published": "specification-templates/security-spec/account-authentication-parameters-v1.conf.example",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/account-authentication-v1.conf",
+      "published": "specification-templates/security-spec/account-authentication-v1.conf.example",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/authentication-cross-platform-hardware-kek-profile-v1.conf",
+      "published": "specification-templates/security-spec/authentication-cross-platform-hardware-kek-profile-v1.conf.example",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/authentication-database-key-authority-v1.conf",
+      "published": "specification-templates/security-spec/authentication-database-key-authority-v1.conf.example",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/authentication-database-key-wrap-model-v1.conf",
+      "published": "specification-templates/security-spec/authentication-database-key-wrap-model-v1.conf.example",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/authentication-database-provider-selection-v1.conf",
+      "published": "specification-templates/security-spec/authentication-database-provider-selection-v1.conf.example",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 1,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/authentication-platform-wrap-primitive-v1.conf",
+      "published": "specification-templates/security-spec/authentication-platform-wrap-primitive-v1.conf.example",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/authentication-storage-boundary-v1.conf",
+      "published": "specification-templates/security-spec/authentication-storage-boundary-v1.conf.example",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 2,
+        "deployment_values": 2
+      }
+    },
+    {
+      "source": "security-spec/authentication-storage-schema-v1.conf",
+      "published": "specification-templates/security-spec/authentication-storage-schema-v1.conf.example",
+      "redactions": {
+        "digests": 5,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/behavioral-startup-zero-side-effect-conformance-v1.conf",
+      "published": "specification-templates/security-spec/behavioral-startup-zero-side-effect-conformance-v1.conf.example",
+      "redactions": {
+        "digests": 7,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/cryptographic-identity-hash-policy-v1.conf",
+      "published": "specification-templates/security-spec/cryptographic-identity-hash-policy-v1.conf.example",
+      "redactions": {
+        "digests": 3,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/email-authentication-code-v1.conf",
+      "published": "specification-templates/security-spec/email-authentication-code-v1.conf.example",
+      "redactions": {
+        "digests": 2,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/email-authentication-code-verifier-v1.conf",
+      "published": "specification-templates/security-spec/email-authentication-code-verifier-v1.conf.example",
+      "redactions": {
+        "digests": 3,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/email-normalization-account-identity-v1.conf",
+      "published": "specification-templates/security-spec/email-normalization-account-identity-v1.conf.example",
+      "redactions": {
+        "digests": 4,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/production-runtime-enforcement-conformance-v1.conf",
+      "published": "specification-templates/security-spec/production-runtime-enforcement-conformance-v1.conf.example",
+      "redactions": {
+        "digests": 2,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/production-runtime-enforcement-design-v1.conf",
+      "published": "specification-templates/security-spec/production-runtime-enforcement-design-v1.conf.example",
+      "redactions": {
+        "digests": 2,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/program-runtime-gate-integration-v1.conf",
+      "published": "specification-templates/security-spec/program-runtime-gate-integration-v1.conf.example",
+      "redactions": {
+        "digests": 2,
+        "identities": 0,
+        "paths": 1,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/protected-operation-checkpoint-ordering-conformance-amendment-v1.conf",
+      "published": "specification-templates/security-spec/protected-operation-checkpoint-ordering-conformance-amendment-v1.conf.example",
+      "redactions": {
+        "digests": 4,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/protected-operation-checkpoint-ordering-refinement-v1.conf",
+      "published": "specification-templates/security-spec/protected-operation-checkpoint-ordering-refinement-v1.conf.example",
+      "redactions": {
+        "digests": 6,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/protected-operation-crash-recovery-conformance-v1.conf",
+      "published": "specification-templates/security-spec/protected-operation-crash-recovery-conformance-v1.conf.example",
+      "redactions": {
+        "digests": 8,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/protected-operation-crash-recovery-idempotency-v1.conf",
+      "published": "specification-templates/security-spec/protected-operation-crash-recovery-idempotency-v1.conf.example",
+      "redactions": {
+        "digests": 8,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/protected-operation-dispatch-architecture-v1.conf",
+      "published": "specification-templates/security-spec/protected-operation-dispatch-architecture-v1.conf.example",
+      "redactions": {
+        "digests": 8,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/protected-operation-dispatch-conformance-v1.conf",
+      "published": "specification-templates/security-spec/protected-operation-dispatch-conformance-v1.conf.example",
+      "redactions": {
+        "digests": 8,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/protected-operation-structural-non-reachability-v1.conf",
+      "published": "specification-templates/security-spec/protected-operation-structural-non-reachability-v1.conf.example",
+      "redactions": {
+        "digests": 12,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/protected-operation-test-seam-behavior-conformance-design-v1.conf",
+      "published": "specification-templates/security-spec/protected-operation-test-seam-behavior-conformance-design-v1.conf.example",
+      "redactions": {
+        "digests": 5,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/protected-operation-test-seam-behavior-red-test-design-v1.conf",
+      "published": "specification-templates/security-spec/protected-operation-test-seam-behavior-red-test-design-v1.conf.example",
+      "redactions": {
+        "digests": 12,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/protected-operation-test-seam-conformance-v1.conf",
+      "published": "specification-templates/security-spec/protected-operation-test-seam-conformance-v1.conf.example",
+      "redactions": {
+        "digests": 8,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/protected-operation-test-seam-design-v1.conf",
+      "published": "specification-templates/security-spec/protected-operation-test-seam-design-v1.conf.example",
+      "redactions": {
+        "digests": 9,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/protected-operation-test-seam-restart-recovery-red-test-design-v1.conf",
+      "published": "specification-templates/security-spec/protected-operation-test-seam-restart-recovery-red-test-design-v1.conf.example",
+      "redactions": {
+        "digests": 3,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/replay-ledger-v1.conf",
+      "published": "specification-templates/security-spec/replay-ledger-v1.conf.example",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/replay-state-commitment-protocol-v1.conf",
+      "published": "specification-templates/security-spec/replay-state-commitment-protocol-v1.conf.example",
+      "redactions": {
+        "digests": 3,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/replay-storage-architecture-v1.conf",
+      "published": "specification-templates/security-spec/replay-storage-architecture-v1.conf.example",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/replay-storage-architecture-v2.conf",
+      "published": "specification-templates/security-spec/replay-storage-architecture-v2.conf.example",
+      "redactions": {
+        "digests": 2,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 7
+      }
+    },
+    {
+      "source": "security-spec/rollback-authority-v1.conf",
+      "published": "specification-templates/security-spec/rollback-authority-v1.conf.example",
+      "redactions": {
+        "digests": 2,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 2
+      }
+    },
+    {
+      "source": "security-spec/rollback-backend-comparison-v1.conf",
+      "published": "specification-templates/security-spec/rollback-backend-comparison-v1.conf.example",
+      "redactions": {
+        "digests": 3,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/rollback-checkpoint-format-v1.conf",
+      "published": "specification-templates/security-spec/rollback-checkpoint-format-v1.conf.example",
+      "redactions": {
+        "digests": 2,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/rollback-counter-attribute-analysis-v1.conf",
+      "published": "specification-templates/security-spec/rollback-counter-attribute-analysis-v1.conf.example",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/rollback-counter-authorization-attribute-decision-v1.conf",
+      "published": "specification-templates/security-spec/rollback-counter-authorization-attribute-decision-v1.conf.example",
+      "redactions": {
+        "digests": 2,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/rollback-counter-authorization-model-evaluation-v1.conf",
+      "published": "specification-templates/security-spec/rollback-counter-authorization-model-evaluation-v1.conf.example",
+      "redactions": {
+        "digests": 4,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/rollback-counter-authorization-model-v1.conf",
+      "published": "specification-templates/security-spec/rollback-counter-authorization-model-v1.conf.example",
+      "redactions": {
+        "digests": 5,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/rollback-counter-authorization-policy-selection-v1.conf",
+      "published": "specification-templates/security-spec/rollback-counter-authorization-policy-selection-v1.conf.example",
+      "redactions": {
+        "digests": 2,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/rollback-counter-authorization-session-design-v1.conf",
+      "published": "specification-templates/security-spec/rollback-counter-authorization-session-design-v1.conf.example",
+      "redactions": {
+        "digests": 2,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/rollback-counter-authorization-session-model-comparison-v1.conf",
+      "published": "specification-templates/security-spec/rollback-counter-authorization-session-model-comparison-v1.conf.example",
+      "redactions": {
+        "digests": 3,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/rollback-counter-authorization-v1.conf",
+      "published": "specification-templates/security-spec/rollback-counter-authorization-v1.conf.example",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 1
+      }
+    },
+    {
+      "source": "security-spec/rollback-counter-persistence-v1.conf",
+      "published": "specification-templates/security-spec/rollback-counter-persistence-v1.conf.example",
+      "redactions": {
+        "digests": 2,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/rollback-crash-consistency-v1.conf",
+      "published": "specification-templates/security-spec/rollback-crash-consistency-v1.conf.example",
+      "redactions": {
+        "digests": 2,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/server-authoritative-enrollment-v1.conf",
+      "published": "specification-templates/security-spec/server-authoritative-enrollment-v1.conf.example",
+      "redactions": {
+        "digests": 9,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/server-authoritative-policy-binding-v1.conf",
+      "published": "specification-templates/security-spec/server-authoritative-policy-binding-v1.conf.example",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/storage-identity-authority-v1.conf",
+      "published": "specification-templates/security-spec/storage-identity-authority-v1.conf.example",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 1
+      }
+    },
+    {
+      "source": "security-spec/storage-identity-manifest-v1.conf",
+      "published": "specification-templates/security-spec/storage-identity-manifest-v1.conf.example",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 1,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/storage-identity-protocol-v1.conf",
+      "published": "specification-templates/security-spec/storage-identity-protocol-v1.conf.example",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 5
+      }
+    },
+    {
+      "source": "security-spec/storage-identity-trust-bootstrap-v1.conf",
+      "published": "specification-templates/security-spec/storage-identity-trust-bootstrap-v1.conf.example",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 1,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/tpm-nv-counter-provisioning-specification-v1.conf",
+      "published": "specification-templates/security-spec/tpm-nv-counter-provisioning-specification-v1.conf.example",
+      "redactions": {
+        "digests": 4,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "security-spec/user-security-enrollment-v1.conf",
+      "published": "specification-templates/security-spec/user-security-enrollment-v1.conf.example",
+      "redactions": {
+        "digests": 7,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/I-Mortal.TrustBroker.csproj",
+      "published": "src/I-Mortal.TrustBroker.csproj",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Mobile/Android/AndroidHardwareEvidenceMapper.cs",
+      "published": "src/Mobile/Android/AndroidHardwareEvidenceMapper.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Mobile/Android/AndroidHardwareSecurityEvidence.cs",
+      "published": "src/Mobile/Android/AndroidHardwareSecurityEvidence.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Mobile/Android/AndroidNativeProbeConverter.cs",
+      "published": "src/Mobile/Android/AndroidNativeProbeConverter.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Mobile/Android/AndroidNativeProbeResult.cs",
+      "published": "src/Mobile/Android/AndroidNativeProbeResult.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Mobile/Android/AndroidProbeInvariants.cs",
+      "published": "src/Mobile/Android/AndroidProbeInvariants.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Mobile/Android/IAndroidTrustProbe.cs",
+      "published": "src/Mobile/Android/IAndroidTrustProbe.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Mobile/IOS/IIosTrustProbe.cs",
+      "published": "src/Mobile/IOS/IIosTrustProbe.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Mobile/IOS/IosHardwareEvidenceMapper.cs",
+      "published": "src/Mobile/IOS/IosHardwareEvidenceMapper.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Mobile/IOS/IosHardwareSecurityEvidence.cs",
+      "published": "src/Mobile/IOS/IosHardwareSecurityEvidence.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Mobile/IOS/IosNativeProbeConverter.cs",
+      "published": "src/Mobile/IOS/IosNativeProbeConverter.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Mobile/IOS/IosNativeProbeResult.cs",
+      "published": "src/Mobile/IOS/IosNativeProbeResult.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Mobile/IOS/IosProbeInvariants.cs",
+      "published": "src/Mobile/IOS/IosProbeInvariants.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Mobile/MobileTrustProbeResult.cs",
+      "published": "src/Mobile/MobileTrustProbeResult.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Program.cs",
+      "published": "src/Program.cs",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 1,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Providers/Android/AndroidKeystoreProvider.cs",
+      "published": "src/Providers/Android/AndroidKeystoreProvider.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Providers/AuthorizationRequestValidator.cs",
+      "published": "src/Providers/AuthorizationRequestValidator.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Providers/IOS/IosSecureEnclaveProvider.cs",
+      "published": "src/Providers/IOS/IosSecureEnclaveProvider.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Providers/ITrustProvider.cs",
+      "published": "src/Providers/ITrustProvider.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Providers/Linux/LinuxTpmProvider.cs",
+      "published": "src/Providers/Linux/LinuxTpmProvider.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Providers/MacOS/MacOsSecureEnclaveProvider.cs",
+      "published": "src/Providers/MacOS/MacOsSecureEnclaveProvider.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Providers/TrustDetectionResult.cs",
+      "published": "src/Providers/TrustDetectionResult.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Providers/TrustOperationBoundary.cs",
+      "published": "src/Providers/TrustOperationBoundary.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Providers/TrustProtocolModels.cs",
+      "published": "src/Providers/TrustProtocolModels.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Providers/TrustProviderCapabilities.cs",
+      "published": "src/Providers/TrustProviderCapabilities.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Providers/TrustProviderFactory.cs",
+      "published": "src/Providers/TrustProviderFactory.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Providers/TrustProviderState.cs",
+      "published": "src/Providers/TrustProviderState.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Providers/Windows/WindowsTpmProvider.cs",
+      "published": "src/Providers/Windows/WindowsTpmProvider.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Registration/UserRegistrationRequest.cs",
+      "published": "src/Registration/UserRegistrationRequest.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/AmdSevSnpCryptographicVerification.cs",
+      "published": "src/Security/ConfidentialCompute/AmdSevSnpCryptographicVerification.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/AmdSevSnpRawEvidence.cs",
+      "published": "src/Security/ConfidentialCompute/AmdSevSnpRawEvidence.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ApprovedWorkloadEvaluationContext.cs",
+      "published": "src/Security/ConfidentialCompute/ApprovedWorkloadEvaluationContext.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ApprovedWorkloadGateAdapterContract.cs",
+      "published": "src/Security/ConfidentialCompute/ApprovedWorkloadGateAdapterContract.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ApprovedWorkloadGateImplementationContract.cs",
+      "published": "src/Security/ConfidentialCompute/ApprovedWorkloadGateImplementationContract.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ApprovedWorkloadGateRedTestContract.cs",
+      "published": "src/Security/ConfidentialCompute/ApprovedWorkloadGateRedTestContract.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ApprovedWorkloadTrustedEvidenceBoundary.cs",
+      "published": "src/Security/ConfidentialCompute/ApprovedWorkloadTrustedEvidenceBoundary.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/AttestationChallenge.cs",
+      "published": "src/Security/ConfidentialCompute/AttestationChallenge.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/AttestedVerifierProvenance.cs",
+      "published": "src/Security/ConfidentialCompute/AttestedVerifierProvenance.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/BoundaryOwnershipEvidence.cs",
+      "published": "src/Security/ConfidentialCompute/BoundaryOwnershipEvidence.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/CommitMarkerEvidence.cs",
+      "published": "src/Security/ConfidentialCompute/CommitMarkerEvidence.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/CommitMarkerOwnership.cs",
+      "published": "src/Security/ConfidentialCompute/CommitMarkerOwnership.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/CompositeProjectIntegrityGate.cs",
+      "published": "src/Security/ConfidentialCompute/CompositeProjectIntegrityGate.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ConfidentialDurabilityOwnershipVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/ConfidentialDurabilityOwnershipVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ConfidentialEvidenceOrigin.cs",
+      "published": "src/Security/ConfidentialCompute/ConfidentialEvidenceOrigin.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ConfidentialPlatformClass.cs",
+      "published": "src/Security/ConfidentialCompute/ConfidentialPlatformClass.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ConfidentialProtectedStateDurabilityVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/ConfidentialProtectedStateDurabilityVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ConfidentialRecoveryDurabilityOwnershipConformance.cs",
+      "published": "src/Security/ConfidentialCompute/ConfidentialRecoveryDurabilityOwnershipConformance.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ConfidentialRecoveryIntegrityOwnershipVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/ConfidentialRecoveryIntegrityOwnershipVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ConfidentialRecoveryRecordIntegrityVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/ConfidentialRecoveryRecordIntegrityVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ConfidentialSecurityBoundaryIdentity.cs",
+      "published": "src/Security/ConfidentialCompute/ConfidentialSecurityBoundaryIdentity.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ContractDecryptionRequest.cs",
+      "published": "src/Security/ConfidentialCompute/ContractDecryptionRequest.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ContractEncryptionRequest.cs",
+      "published": "src/Security/ConfidentialCompute/ContractEncryptionRequest.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/CryptographicContractEnvelope.cs",
+      "published": "src/Security/ConfidentialCompute/CryptographicContractEnvelope.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/CustodyManifestDescriptor.cs",
+      "published": "src/Security/ConfidentialCompute/CustodyManifestDescriptor.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/CustodyManifestProvenance.cs",
+      "published": "src/Security/ConfidentialCompute/CustodyManifestProvenance.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/DenyAllApprovedWorkloadGate.cs",
+      "published": "src/Security/ConfidentialCompute/DenyAllApprovedWorkloadGate.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/DenyAllDeveloperSourceAuthorityGate.cs",
+      "published": "src/Security/ConfidentialCompute/DenyAllDeveloperSourceAuthorityGate.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/DenyAllUserRuntimeSecurityGate.cs",
+      "published": "src/Security/ConfidentialCompute/DenyAllUserRuntimeSecurityGate.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/DeveloperEmailRecoveryChallenge.cs",
+      "published": "src/Security/ConfidentialCompute/DeveloperEmailRecoveryChallenge.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/DeveloperEmailRecoveryEvidence.cs",
+      "published": "src/Security/ConfidentialCompute/DeveloperEmailRecoveryEvidence.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/DeveloperProofOfPossessionChallenge.cs",
+      "published": "src/Security/ConfidentialCompute/DeveloperProofOfPossessionChallenge.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/DeveloperProofOfPossessionEvidence.cs",
+      "published": "src/Security/ConfidentialCompute/DeveloperProofOfPossessionEvidence.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/DeveloperSourceAuthorityMode.cs",
+      "published": "src/Security/ConfidentialCompute/DeveloperSourceAuthorityMode.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/DeveloperUserCryptographicCustodyBoundary.cs",
+      "published": "src/Security/ConfidentialCompute/DeveloperUserCryptographicCustodyBoundary.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/DurabilityEvidence.cs",
+      "published": "src/Security/ConfidentialCompute/DurabilityEvidence.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/DurabilityOwnership.cs",
+      "published": "src/Security/ConfidentialCompute/DurabilityOwnership.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/DurabilityProof.cs",
+      "published": "src/Security/ConfidentialCompute/DurabilityProof.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/EncryptedProjectSigningKeyPolicy.cs",
+      "published": "src/Security/ConfidentialCompute/EncryptedProjectSigningKeyPolicy.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IAmdSevSnpCryptographicVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/IAmdSevSnpCryptographicVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IApprovedWorkloadGate.cs",
+      "published": "src/Security/ConfidentialCompute/IApprovedWorkloadGate.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IApprovedWorkloadTrustedEvidenceBoundary.cs",
+      "published": "src/Security/ConfidentialCompute/IApprovedWorkloadTrustedEvidenceBoundary.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IAttestationChallengeIssuer.cs",
+      "published": "src/Security/ConfidentialCompute/IAttestationChallengeIssuer.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IAttestationReplayLedger.cs",
+      "published": "src/Security/ConfidentialCompute/IAttestationReplayLedger.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IAttestedVerifierProvenanceVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/IAttestedVerifierProvenanceVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IBoundaryOwnershipEvidenceProducer.cs",
+      "published": "src/Security/ConfidentialCompute/IBoundaryOwnershipEvidenceProducer.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ICommitMarkerEvidenceProducer.cs",
+      "published": "src/Security/ConfidentialCompute/ICommitMarkerEvidenceProducer.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ICompositeProjectIntegrityGate.cs",
+      "published": "src/Security/ConfidentialCompute/ICompositeProjectIntegrityGate.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IConfidentialComputeAttestationVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/IConfidentialComputeAttestationVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IConfidentialComputeEvidence.cs",
+      "published": "src/Security/ConfidentialCompute/IConfidentialComputeEvidence.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IConfidentialComputeEvidenceProvider.cs",
+      "published": "src/Security/ConfidentialCompute/IConfidentialComputeEvidenceProvider.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IConfidentialComputeMeasurementPolicy.cs",
+      "published": "src/Security/ConfidentialCompute/IConfidentialComputeMeasurementPolicy.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IConfidentialSecurityBoundary.cs",
+      "published": "src/Security/ConfidentialCompute/IConfidentialSecurityBoundary.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ICryptographicContractEnvelopeVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/ICryptographicContractEnvelopeVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ICryptographicContractProtector.cs",
+      "published": "src/Security/ConfidentialCompute/ICryptographicContractProtector.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ICustodyManifestProvenanceVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/ICustodyManifestProvenanceVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IDeveloperEmailRecoveryVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/IDeveloperEmailRecoveryVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IDeveloperProofOfPossessionVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/IDeveloperProofOfPossessionVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IDeveloperRecoveryReplayLedger.cs",
+      "published": "src/Security/ConfidentialCompute/IDeveloperRecoveryReplayLedger.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IDeveloperSourceAuthorityGate.cs",
+      "published": "src/Security/ConfidentialCompute/IDeveloperSourceAuthorityGate.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IDeveloperUsbUnavailabilityVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/IDeveloperUsbUnavailabilityVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IDurabilityEvidenceProducer.cs",
+      "published": "src/Security/ConfidentialCompute/IDurabilityEvidenceProducer.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IDurabilityOwnershipVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/IDurabilityOwnershipVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IIntelTdxCryptographicVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/IIntelTdxCryptographicVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IManifestTrustAnchorProvider.cs",
+      "published": "src/Security/ConfidentialCompute/IManifestTrustAnchorProvider.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IMortalSecurityUmbrellaRoot.cs",
+      "published": "src/Security/ConfidentialCompute/IMortalSecurityUmbrellaRoot.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProjectIntegrityChallengeBindingVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/IProjectIntegrityChallengeBindingVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProjectIntegrityVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/IProjectIntegrityVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedDeveloperIdentityAssociatedDataSerializer.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedDeveloperIdentityAssociatedDataSerializer.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedDeveloperIdentityCanonicalSerializer.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedDeveloperIdentityCanonicalSerializer.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedDeveloperIdentityCryptographicCustody.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedDeveloperIdentityCryptographicCustody.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedDeveloperIdentityCryptographicKeyProvider.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedDeveloperIdentityCryptographicKeyProvider.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedDeveloperIdentityIntegrityDigestCalculator.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedDeveloperIdentityIntegrityDigestCalculator.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedDeveloperIdentityIntegrityVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedDeveloperIdentityIntegrityVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedDeveloperIdentityRecordValidator.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedDeveloperIdentityRecordValidator.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedInventoryCanonicalizer.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedInventoryCanonicalizer.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedInventoryEnumerator.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedInventoryEnumerator.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedInventoryScopeAuthority.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedInventoryScopeAuthority.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedInventoryScopeProvider.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedInventoryScopeProvider.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedProjectAccessGate.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedProjectAccessGate.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedStateAtomicStore.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedStateAtomicStore.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedStateAtomicTransaction.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedStateAtomicTransaction.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedStateCommitBoundary.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedStateCommitBoundary.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedStateCommitConformance.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedStateCommitConformance.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedStateDurabilityBoundary.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedStateDurabilityBoundary.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedStateDurabilityVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedStateDurabilityVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedStateRecoveryBoundary.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedStateRecoveryBoundary.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedStateRecoveryConformance.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedStateRecoveryConformance.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedStateRecoveryStore.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedStateRecoveryStore.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedStateReplayGuard.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedStateReplayGuard.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedStateRepository.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedStateRepository.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedStateTransitionEngine.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedStateTransitionEngine.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IProtectedStateTransitionValidator.cs",
+      "published": "src/Security/ConfidentialCompute/IProtectedStateTransitionValidator.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IRecoveryDurabilityOwnershipConformance.cs",
+      "published": "src/Security/ConfidentialCompute/IRecoveryDurabilityOwnershipConformance.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IRecoveryIntegrityEvidenceProducer.cs",
+      "published": "src/Security/ConfidentialCompute/IRecoveryIntegrityEvidenceProducer.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IRecoveryIntegrityOwnershipVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/IRecoveryIntegrityOwnershipVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IRecoveryRecordIntegrityVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/IRecoveryRecordIntegrityVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ISecurityClock.cs",
+      "published": "src/Security/ConfidentialCompute/ISecurityClock.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ITrustedProducerProvenanceVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/ITrustedProducerProvenanceVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ITrustedVerificationEvidenceProducer.cs",
+      "published": "src/Security/ConfidentialCompute/ITrustedVerificationEvidenceProducer.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ITypedVerificationEvidenceProducer.cs",
+      "published": "src/Security/ConfidentialCompute/ITypedVerificationEvidenceProducer.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IUserDeviceFingerprintCanonicalSerializer.cs",
+      "published": "src/Security/ConfidentialCompute/IUserDeviceFingerprintCanonicalSerializer.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IUserDeviceFingerprintDigest.cs",
+      "published": "src/Security/ConfidentialCompute/IUserDeviceFingerprintDigest.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IUserDeviceProofOfPossessionChallengeCanonicalSerializer.cs",
+      "published": "src/Security/ConfidentialCompute/IUserDeviceProofOfPossessionChallengeCanonicalSerializer.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IUserDeviceProofOfPossessionSignatureAlgorithmAllowlist.cs",
+      "published": "src/Security/ConfidentialCompute/IUserDeviceProofOfPossessionSignatureAlgorithmAllowlist.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IUserDeviceProofOfPossessionValidator.cs",
+      "published": "src/Security/ConfidentialCompute/IUserDeviceProofOfPossessionValidator.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IUserRuntimeSecurityGate.cs",
+      "published": "src/Security/ConfidentialCompute/IUserRuntimeSecurityGate.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IVeraCryptBackingSourceVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/IVeraCryptBackingSourceVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IVeraCryptUsbCustodyOperations.cs",
+      "published": "src/Security/ConfidentialCompute/IVeraCryptUsbCustodyOperations.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IVeraCryptUsbKeyCustodyProvider.cs",
+      "published": "src/Security/ConfidentialCompute/IVeraCryptUsbKeyCustodyProvider.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IVerificationEvidenceInterfaceAdapter.cs",
+      "published": "src/Security/ConfidentialCompute/IVerificationEvidenceInterfaceAdapter.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IntelTdxCryptographicVerification.cs",
+      "published": "src/Security/ConfidentialCompute/IntelTdxCryptographicVerification.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IntelTdxRawEvidence.cs",
+      "published": "src/Security/ConfidentialCompute/IntelTdxRawEvidence.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/PreparedProtectedStateTransition.cs",
+      "published": "src/Security/ConfidentialCompute/PreparedProtectedStateTransition.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProjectIntegrityChallengeBindingVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/ProjectIntegrityChallengeBindingVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProjectIntegrityEvidence.cs",
+      "published": "src/Security/ConfidentialCompute/ProjectIntegrityEvidence.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProjectIntegrityPolicy.cs",
+      "published": "src/Security/ConfidentialCompute/ProjectIntegrityPolicy.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProjectIntegrityVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/ProjectIntegrityVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedDeveloperIdentity.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedDeveloperIdentity.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedDeveloperIdentityAssociatedDataSerializer.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedDeveloperIdentityAssociatedDataSerializer.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedDeveloperIdentityCanonicalSerializer.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedDeveloperIdentityCanonicalSerializer.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedDeveloperIdentityCryptographicDomains.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedDeveloperIdentityCryptographicDomains.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedDeveloperIdentityField.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedDeveloperIdentityField.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedDeveloperIdentityIntegrityDigestCalculator.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedDeveloperIdentityIntegrityDigestCalculator.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedDeveloperIdentityIntegrityVerifier.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedDeveloperIdentityIntegrityVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedDeveloperIdentityRecordValidator.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedDeveloperIdentityRecordValidator.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedInventoryChange.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedInventoryChange.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedInventoryEntry.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedInventoryEntry.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedInventoryEnumeration.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedInventoryEnumeration.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedInventoryScope.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedInventoryScope.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedInventoryScopeAuthority.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedInventoryScopeAuthority.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedInventoryScopeProvider.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedInventoryScopeProvider.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedStateAtomicTransactionResult.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedStateAtomicTransactionResult.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedStateCommit.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedStateCommit.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedStateCommitMarker.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedStateCommitMarker.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedStateCommitRequest.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedStateCommitRequest.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedStateCommitResult.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedStateCommitResult.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedStateRecoveryDisposition.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedStateRecoveryDisposition.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedStateRecoveryRecord.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedStateRecoveryRecord.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedStateSnapshot.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedStateSnapshot.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedStateTransactionPhase.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedStateTransactionPhase.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/ProtectedStateTransition.cs",
+      "published": "src/Security/ConfidentialCompute/ProtectedStateTransition.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/RecoveryIntegrityEvidence.cs",
+      "published": "src/Security/ConfidentialCompute/RecoveryIntegrityEvidence.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/RecoveryIntegrityOwnership.cs",
+      "published": "src/Security/ConfidentialCompute/RecoveryIntegrityOwnership.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/RecoveryRecordIntegrityVerification.cs",
+      "published": "src/Security/ConfidentialCompute/RecoveryRecordIntegrityVerification.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/RootConfidentialComputeContext.cs",
+      "published": "src/Security/ConfidentialCompute/RootConfidentialComputeContext.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/RootConfidentialComputeDenialReason.cs",
+      "published": "src/Security/ConfidentialCompute/RootConfidentialComputeDenialReason.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/RootConfidentialComputeGate.cs",
+      "published": "src/Security/ConfidentialCompute/RootConfidentialComputeGate.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/RootConfidentialComputeGateResult.cs",
+      "published": "src/Security/ConfidentialCompute/RootConfidentialComputeGateResult.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/RootConfidentialComputeState.cs",
+      "published": "src/Security/ConfidentialCompute/RootConfidentialComputeState.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/SystemSecurityClock.cs",
+      "published": "src/Security/ConfidentialCompute/SystemSecurityClock.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/TrustedProducerContext.cs",
+      "published": "src/Security/ConfidentialCompute/TrustedProducerContext.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/TrustedProducerProvenance.cs",
+      "published": "src/Security/ConfidentialCompute/TrustedProducerProvenance.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UmbrellaRootAuthorizationResult.cs",
+      "published": "src/Security/ConfidentialCompute/UmbrellaRootAuthorizationResult.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UmbrellaRootAuthorizationState.cs",
+      "published": "src/Security/ConfidentialCompute/UmbrellaRootAuthorizationState.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UmbrellaRootDenialReason.cs",
+      "published": "src/Security/ConfidentialCompute/UmbrellaRootDenialReason.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UmbrellaSecurityDomain.cs",
+      "published": "src/Security/ConfidentialCompute/UmbrellaSecurityDomain.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UserDeviceCryptographicIdentityBoundary.cs",
+      "published": "src/Security/ConfidentialCompute/UserDeviceCryptographicIdentityBoundary.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UserDeviceEnrollmentChallenge.cs",
+      "published": "src/Security/ConfidentialCompute/UserDeviceEnrollmentChallenge.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UserDeviceEnrollmentChallengeData.cs",
+      "published": "src/Security/ConfidentialCompute/UserDeviceEnrollmentChallengeData.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UserDeviceFingerprintCanonicalSerializer.cs",
+      "published": "src/Security/ConfidentialCompute/UserDeviceFingerprintCanonicalSerializer.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UserDeviceFingerprintCanonicalizationBoundary.cs",
+      "published": "src/Security/ConfidentialCompute/UserDeviceFingerprintCanonicalizationBoundary.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UserDeviceFingerprintDigest.cs",
+      "published": "src/Security/ConfidentialCompute/UserDeviceFingerprintDigest.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UserDeviceFingerprintDigestContract.cs",
+      "published": "src/Security/ConfidentialCompute/UserDeviceFingerprintDigestContract.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionChallengeCanonicalSerializationContract.cs",
+      "published": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionChallengeCanonicalSerializationContract.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionChallengeCanonicalSerializer.cs",
+      "published": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionChallengeCanonicalSerializer.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionChallengeData.cs",
+      "published": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionChallengeData.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionContract.cs",
+      "published": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionContract.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionSignatureAlgorithmAllowlist.cs",
+      "published": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionSignatureAlgorithmAllowlist.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionSignatureAlgorithmAllowlistContract.cs",
+      "published": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionSignatureAlgorithmAllowlistContract.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionSignatureContract.cs",
+      "published": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionSignatureContract.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionSignatureData.cs",
+      "published": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionSignatureData.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionSignatureValidationContract.cs",
+      "published": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionSignatureValidationContract.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionValidationResultData.cs",
+      "published": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionValidationResultData.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionValidatorImplementationContract.cs",
+      "published": "src/Security/ConfidentialCompute/UserDeviceProofOfPossessionValidatorImplementationContract.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UserMultiDeviceAccountIdentityBoundary.cs",
+      "published": "src/Security/ConfidentialCompute/UserMultiDeviceAccountIdentityBoundary.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/UserPlatformCryptographicCustodyGate.cs",
+      "published": "src/Security/ConfidentialCompute/UserPlatformCryptographicCustodyGate.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/VeraCryptBackingSourceChallenge.cs",
+      "published": "src/Security/ConfidentialCompute/VeraCryptBackingSourceChallenge.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/VeraCryptBackingSourceEvidence.cs",
+      "published": "src/Security/ConfidentialCompute/VeraCryptBackingSourceEvidence.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/VeraCryptUsbKeyCustodyDescriptor.cs",
+      "published": "src/Security/ConfidentialCompute/VeraCryptUsbKeyCustodyDescriptor.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/VerificationEvidenceBinding.cs",
+      "published": "src/Security/ConfidentialCompute/VerificationEvidenceBinding.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/VerifiedAttestationResult.cs",
+      "published": "src/Security/ConfidentialCompute/VerifiedAttestationResult.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/VerifiedConfidentialComputeEvidence.cs",
+      "published": "src/Security/ConfidentialCompute/VerifiedConfidentialComputeEvidence.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/VerifiedEvidenceNormalizer.cs",
+      "published": "src/Security/ConfidentialCompute/VerifiedEvidenceNormalizer.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ProductionRuntimeGate.cs",
+      "published": "src/Security/ProductionRuntimeGate.cs",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ProductionStartupDecision.cs",
+      "published": "src/Security/ProductionStartupDecision.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/SecurityEnrollmentInvariants.cs",
+      "published": "src/Security/SecurityEnrollmentInvariants.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/SecurityEnrollmentService.cs",
+      "published": "src/Security/SecurityEnrollmentService.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/SecurityEnrollmentState.cs",
+      "published": "src/Security/SecurityEnrollmentState.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/SecurityIdentityDeriver.cs",
+      "published": "src/Security/SecurityIdentityDeriver.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/SecurityPolicyReference.cs",
+      "published": "src/Security/SecurityPolicyReference.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/UserSecurityProfile.cs",
+      "published": "src/Security/UserSecurityProfile.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Tests/I-Mortal.TrustBroker.Conformance/AuthorizationRequestValidatorConformanceTests.cs",
+      "published": "src/Tests/I-Mortal.TrustBroker.Conformance/AuthorizationRequestValidatorConformanceTests.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Tests/I-Mortal.TrustBroker.Conformance/F21UserEnrollmentTests.cs",
+      "published": "src/Tests/I-Mortal.TrustBroker.Conformance/F21UserEnrollmentTests.cs",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Tests/I-Mortal.TrustBroker.Conformance/F22ServerAuthoritativePolicyTests.cs",
+      "published": "src/Tests/I-Mortal.TrustBroker.Conformance/F22ServerAuthoritativePolicyTests.cs",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Tests/I-Mortal.TrustBroker.Conformance/I-Mortal.TrustBroker.Conformance.csproj",
+      "published": "src/Tests/I-Mortal.TrustBroker.Conformance/I-Mortal.TrustBroker.Conformance.csproj",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Tests/I-Mortal.TrustBroker.Conformance/MSTestSettings.cs",
+      "published": "src/Tests/I-Mortal.TrustBroker.Conformance/MSTestSettings.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Tests/I-Mortal.TrustBroker.Conformance/MobileEvidenceConformanceTests.cs",
+      "published": "src/Tests/I-Mortal.TrustBroker.Conformance/MobileEvidenceConformanceTests.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Tests/I-Mortal.TrustBroker.Conformance/ProductionRuntimeGateConformanceTests.cs",
+      "published": "src/Tests/I-Mortal.TrustBroker.Conformance/ProductionRuntimeGateConformanceTests.cs",
+      "redactions": {
+        "digests": 2,
+        "identities": 0,
+        "paths": 1,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Tests/I-Mortal.TrustBroker.Conformance/ProductionStartupDecisionConformanceTests.cs",
+      "published": "src/Tests/I-Mortal.TrustBroker.Conformance/ProductionStartupDecisionConformanceTests.cs",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 2,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Tests/I-Mortal.TrustBroker.Conformance/ProgramRuntimeGateIntegrationTests.cs",
+      "published": "src/Tests/I-Mortal.TrustBroker.Conformance/ProgramRuntimeGateIntegrationTests.cs",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 1,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Tests/I-Mortal.TrustBroker.Conformance/ProtectedOperationStructuralNonReachabilityTests.cs",
+      "published": "src/Tests/I-Mortal.TrustBroker.Conformance/ProtectedOperationStructuralNonReachabilityTests.cs",
+      "redactions": {
+        "digests": 1,
+        "identities": 0,
+        "paths": 3,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Tests/I-Mortal.TrustBroker.Conformance/ProtectedOperationTestSeam.cs",
+      "published": "src/Tests/I-Mortal.TrustBroker.Conformance/ProtectedOperationTestSeam.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Tests/I-Mortal.TrustBroker.Conformance/ProtectedOperationTestSeamBehaviorRedTests.cs",
+      "published": "src/Tests/I-Mortal.TrustBroker.Conformance/ProtectedOperationTestSeamBehaviorRedTests.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Tests/I-Mortal.TrustBroker.Conformance/ProtectedOperationTestSeamCoreBehaviorRedTests.cs",
+      "published": "src/Tests/I-Mortal.TrustBroker.Conformance/ProtectedOperationTestSeamCoreBehaviorRedTests.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Tests/I-Mortal.TrustBroker.Conformance/ProtectedOperationTestSeamRedTests.cs",
+      "published": "src/Tests/I-Mortal.TrustBroker.Conformance/ProtectedOperationTestSeamRedTests.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Tests/I-Mortal.TrustBroker.Conformance/ProtectedOperationTestSeamRestartRecoveryRedTests.cs",
+      "published": "src/Tests/I-Mortal.TrustBroker.Conformance/ProtectedOperationTestSeamRestartRecoveryRedTests.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Tests/I-Mortal.TrustBroker.Conformance/ProviderContractConformanceTests.cs",
+      "published": "src/Tests/I-Mortal.TrustBroker.Conformance/ProviderContractConformanceTests.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Tests/I-Mortal.TrustBroker.Conformance/ProviderDetectionConformanceTests.cs",
+      "published": "src/Tests/I-Mortal.TrustBroker.Conformance/ProviderDetectionConformanceTests.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Tests/I-Mortal.TrustBroker.Conformance/ReplayLedgerSemanticsConformanceTests.cs",
+      "published": "src/Tests/I-Mortal.TrustBroker.Conformance/ReplayLedgerSemanticsConformanceTests.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Tests/I-Mortal.TrustBroker.Conformance/TrustOperationBoundaryConformanceTests.cs",
+      "published": "src/Tests/I-Mortal.TrustBroker.Conformance/TrustOperationBoundaryConformanceTests.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Tests/I-Mortal.TrustBroker.Conformance/TrustStateConformanceTests.cs",
+      "published": "src/Tests/I-Mortal.TrustBroker.Conformance/TrustStateConformanceTests.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    }
+  ]
+}

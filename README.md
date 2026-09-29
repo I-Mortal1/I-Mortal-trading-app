@@ -1,52 +1,64 @@
-# I-Mortal trading app
+# I-Mortal trading app — security infrastructure
 
-This repository contains completed, tested security utility components for the
-I-Mortal trading app project. This first publication is a .NET 10 library, not a
-finished trading application. It contains no trading engine, exchange connector,
-order execution, account authentication or production authorization service.
+Public, sanitized source snapshot of the current TrustBroker security project.
+All current C# source and project definitions are included, including unfinished
+interfaces and original conformance tests. This is development infrastructure:
+production authorization and protected provider operations remain disabled.
+A complete source snapshot does not mean a complete or certified TEE system.
 
-## Components
+## Source map
 
-| Function | Location | Implemented behavior |
-| --- | --- | --- |
-| Algorithm policy | `src/I-Mortal.Security/AlgorithmPolicy` | Accepts only the exact `ECDSA-P256-SHA256-P1363` / `EC-P256` pair using ordinal, case-sensitive comparisons |
-| Challenge serialization | `src/I-Mortal.Security/Challenges` | Produces deterministic, domain-separated, length-prefixed challenge bytes using strict UTF-8, NFC input, big-endian integers and millisecond wire timestamps |
-| Algorithm regression checks | `tests/AlgorithmPolicy` | Exact acceptance, aliases, malformed values, character mutations, culture independence and repeated calls |
-| Serialization regression checks | `tests/Challenges` and `tools/check.py` | Independent byte-exact vectors, overflow, Unicode and size rejection cases |
+| Directory | Contents |
+| --- | --- |
+| `security-infrastructure/src/Security/ConfidentialCompute` | TEE root gates, Intel TDX / AMD SEV-SNP evidence contracts, integrity, custody, recovery, protected-state interfaces, device identity and challenge algorithms |
+| `security-infrastructure/src/Providers` | Windows/Linux TPM and Apple/Android provider boundaries; protected operations return denial |
+| `security-infrastructure/src/Mobile` | Android/iOS evidence mapping and native probe contracts |
+| `security-infrastructure/src/Security` | Enrollment, identity derivation, production runtime and startup gates |
+| `security-infrastructure/src/Tests` | Original conformance sources, sanitized; some require private deployment fixtures or Windows |
+| `security-infrastructure/specification-templates` | Sanitized design contracts, for reading only; these are not valid deployment policies |
+| `src/I-Mortal.Security` and `tests` | Existing standalone algorithm-policy and challenge-serialization library and regression suites |
+| `tools` | Repeatable export, public-content validation and tests |
 
-The original namespace is retained for source continuity. The folder structure
-groups the published code by its function.
+No key material, credentials, recovery address, recorded digest values, binaries,
+private audit evidence or private Git history are included in the source snapshot.
+Cryptographic APIs, algorithm names and code that computes hashes remain intact.
+Removed values use explicit `PUBLIC_*_REMOVED` placeholders. Git itself necessarily
+uses commit and object identifiers; the restriction applies to published file contents.
+Earlier public commits are preserved; see [publication scope](docs/publication-scope.md).
 
-## Build and verify
+## Verify
 
-Install the .NET 10 SDK and Python 3, then run:
+Requires Python 3.10+ and the .NET 10 SDK:
 
 ```sh
 python3 tools/check.py
 ```
 
-The projects have no third-party package dependencies. `NuGet.Config` clears
-remote package sources, so restore uses locally installed framework packs.
-The check builds both test executables and runs the two regression suites.
+The check scans the reviewed file list, builds the public source, runs the existing
+algorithm/serialization suites and checks publication-specific fail-closed behavior.
+It does not provision hardware, generate production keys or authorize trading.
+The original deployment-dependent test suite is included for inspection and future
+adaptation, but is not represented as passing by this command.
+See [inspection and validation](docs/security-infrastructure.md) for current limits.
 
-## Behavior boundaries
+## Update from the private working project
 
-Algorithm acceptance does not verify a signature. Serialized bytes do not prove
-freshness, authentication or authorization. The challenge data API accepts Unix
-seconds; the serializer writes checked Unix milliseconds. Inputs must already be
-NFC-normalized. The serializer uses the canonical-serialization contract's domain.
+Run from this public repository, replacing the argument with the private project root:
 
-The earlier seconds/domain encoding is not supported by this published version.
-No migration or compatibility claim is made for old signed challenge bytes.
-The tests do not establish hardware security, attestation or production readiness.
+```sh
+python3 tools/export_security.py --source /path/to/private/TrustBroker
+python3 tools/export_security.py --source /path/to/private/TrustBroker --check
+python3 tools/check.py
+```
 
-This publication excludes unfinished validator drafts, synthetic composition
-models, deployment policies, hardware probes, account data, local audit reports,
-credentials and compiled artifacts. No private keys are required to build or test.
+The exporter reads only the paths in `tools/export-inputs.json`. Added or removed
+C# or project files stop the export until that list is reviewed. Review new design
+contracts explicitly as well. Changes to generated paths require a deliberate
+update to `docs/publication-files.json`. The exporter never pushes automatically.
+Review the diff, run the checks, then commit and push the public repository normally.
+Never copy the private `.git`, build output or evidence directories into it.
+CI repeats the public checks on pushes and pull requests; it cannot access the
+private project or attest that future private changes have been exported.
 
-## Updates
-
-Keep updates scoped to the two published components until another component has
-been reviewed and tested. Run `python3 tools/check.py` and review every staged
-file before pushing. `docs/source-manifest.json` records the reviewed source bytes;
-update it deliberately with reviewed source changes. See [publication scope](docs/publication-scope.md).
+No license grant has been selected. Public visibility alone does not grant an
+open-source license.

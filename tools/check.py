@@ -1,13 +1,13 @@
 """Build and verify the curated public library; no credentials or hardware needed."""
 import base64
-import hashlib
 import json
 import os
 from pathlib import Path
-import re
 import struct
 import subprocess
 import tempfile
+import sys
+from export_security import validate_text
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -22,34 +22,38 @@ def check_publication():
     actual = {str(p.relative_to(ROOT)).replace(os.sep, '/') for p in ROOT.rglob('*')
               if p.is_file() and not {'.git', 'bin', 'obj', '__pycache__'}.intersection(p.relative_to(ROOT).parts)}
     require(actual == allowed, 'Publication file set differs from reviewed allowlist: ' + str(sorted(actual ^ allowed)))
-    patterns = [
-        rb'-----BEGIN (?:RSA |EC |OPENSSH |DSA |ENCRYPTED )?PRIVATE KEY-----',
-        rb'gh[pousr]_[A-Za-z0-9]{20,}', rb'github_pat_[A-Za-z0-9_]{20,}',
-        rb'AKIA[0-9A-Z]{16}', rb'sk-[A-Za-z0-9_-]{20,}',
-        rb'(?i)(?:password|api_key|access_token|client_secret)\s*[:=]\s*["\x27][^"\x27\s]{8,}["\x27]',
-    ]
     for name in sorted(allowed):
-        data = (ROOT / name).read_bytes()
-        require(b'\0' not in data, 'Unexpected binary file: ' + name)
-        for pattern in patterns:
-            require(re.search(pattern, data) is None, 'Potential credential found in: ' + name)
+        path = ROOT / name
+        require(not path.is_symlink() and not any(p.is_symlink() for p in path.parents),
+                'Symlink in publication: ' + name)
+        validate_text(name, path.read_text(encoding='utf-8'))
     for entry in json.loads((ROOT / 'docs/source-manifest.json').read_text())['components']:
-        require(hashlib.sha256((ROOT / entry['path']).read_bytes()).hexdigest() == entry['sha256'],
-                'Reviewed source hash changed: ' + entry['path'])
+        require((ROOT / entry['path']).read_text() == (ROOT / entry['upstream']).read_text(),
+                'Public utility differs from exported source: ' + entry['path'])
     print('PUBLICATION_FILE_AND_HEURISTIC_SECRET_CHECK=PASS')
     print('PUBLICATION_FILES=' + str(len(allowed)))
 
 
 def main():
     check_publication()
+    subprocess.run([sys.executable, str(ROOT / 'tools/test_export_security.py')], check=True, cwd=ROOT)
     with tempfile.TemporaryDirectory(prefix='imortal-check-') as temporary:
         env = dict(os.environ, DOTNET_CLI_HOME=temporary, DOTNET_CLI_TELEMETRY_OPTOUT='1', DOTNET_NOLOGO='1')
         def run(project):
-            result = subprocess.run(['dotnet', 'run', '--project', str(ROOT / project),
-                                     '--configuration', 'Release', '--verbosity', 'quiet'],
+            print("BUILD=" + project, flush=True)
+            result = subprocess.run(['dotnet', 'build', str(ROOT / project),
+                                     '--configuration', 'Release', '--verbosity', 'quiet',
+                                     '-p:SelfContained=false', '-p:PublishTrimmed=false', '-p:PublishSingleFile=false'],
                                     cwd=ROOT, env=env, text=True, capture_output=True, timeout=180)
             require(result.returncode == 0, result.stdout + result.stderr)
+            assembly = ROOT / Path(project).parent / 'bin/Release/net10.0' / (Path(project).stem + '.dll')
+            result = subprocess.run(['dotnet', str(assembly)], cwd=ROOT, env=env,
+                                    text=True, capture_output=True, timeout=180)
+            require(result.returncode == 0, result.stdout + result.stderr)
             return result.stdout
+        export = run('tests/PublicExport/PublicExport.csproj')
+        require('PUBLIC_EXPORT_BEHAVIOR=PASS' in export, 'Public export behavior did not pass')
+        print(export, end='')
         policy = run('tests/AlgorithmPolicy/AlgorithmPolicy.csproj')
         require('ALLOWLIST_BEHAVIOR=PASS' in policy, 'Algorithm suite did not pass')
         print(policy, end='')
