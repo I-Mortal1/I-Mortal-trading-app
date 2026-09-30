@@ -2,6 +2,33 @@ namespace IMortal.TrustBroker.Security.ConfidentialCompute;
 
 public sealed class RootConfidentialComputeGate
 {
+    /// <summary>Shared transaction path; never falls back to parameterless acquisition.</summary>
+    public RootConfidentialComputeGateResult Evaluate(IssuedAuthorization issued,
+        ITransactionTeeEvidenceProvider provider, ITransactionTeeVerifier verifier)
+    {
+        try
+        {
+            var raw = provider.Collect(issued);
+            if (raw is null) return Deny(RootConfidentialComputeDenialReason.NoEvidence);
+            // Read each asserted field once, then verify the immutable snapshot. This
+            // snapshot is NOT trusted merely because its type is named Verified.
+            var snapshot = new VerifiedConfidentialComputeEvidence(raw.Origin, raw.PlatformClass,
+                raw.TeeBoundaryPresent, raw.RemoteAttestationPresent, raw.AttestationIssuedAt,
+                raw.AttestationExpiresAt, raw.Measurement, raw.MeasurementPolicyId,
+                raw.WorkloadIdentity, raw.PlatformIdentity, raw.SecurityPolicyId, raw.SignedArtifactDigest);
+            var normalized = VerifiedEvidenceNormalizer.NormalizeVerified(snapshot, issued.Owner.EvaluationTime);
+            if (!normalized.Succeeded || snapshot.PlatformClass != issued.Challenge.ExpectedPlatform ||
+                snapshot.WorkloadIdentity != issued.Challenge.WorkloadBinding ||
+                snapshot.AttestationIssuedAt < issued.Challenge.IssuedAt ||
+                !verifier.Verify(issued, snapshot) || !_attestationVerifier.Verify(snapshot) ||
+                !_measurementPolicy.Accept(snapshot))
+                return Deny(RootConfidentialComputeDenialReason.AttestationInvalid);
+            return new(RootConfidentialComputeState.Satisfied, RootConfidentialComputeDenialReason.None,
+                snapshot.PlatformClass, snapshot.AttestationExpiresAt);
+        }
+        catch { return Deny(RootConfidentialComputeDenialReason.VerifierFailure); }
+    }
+
     private readonly IConfidentialComputeEvidenceProvider _evidenceProvider;
     private readonly IConfidentialComputeAttestationVerifier _attestationVerifier;
     private readonly IConfidentialComputeMeasurementPolicy _measurementPolicy;

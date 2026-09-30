@@ -27,6 +27,21 @@ namespace IMortal.TrustBroker.Security.ConfidentialCompute;
 /// </summary>
 public sealed class ApprovedWorkloadEvaluationContext
 {
+    private readonly ApprovedWorkloadEvaluationRequest? _owningRequest;
+
+    internal ApprovedWorkloadEvaluationContext(
+        ApprovedWorkloadEvaluationRequest owningRequest,
+        ProjectIntegrityEvidence evidence,
+        ProjectIntegrityPolicy requiredPolicy,
+        AttestationChallenge challenge)
+        : this(evidence, requiredPolicy, challenge, owningRequest.EvaluationTime)
+    {
+        _owningRequest = owningRequest;
+    }
+
+    internal bool BelongsTo(ApprovedWorkloadEvaluationRequest request) =>
+        ReferenceEquals(_owningRequest, request);
+
     public ApprovedWorkloadEvaluationContext(
         ProjectIntegrityEvidence evidence,
         ProjectIntegrityPolicy requiredPolicy,

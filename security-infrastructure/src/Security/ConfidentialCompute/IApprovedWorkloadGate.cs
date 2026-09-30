@@ -9,4 +9,11 @@ namespace IMortal.TrustBroker.Security.ConfidentialCompute;
 public interface IApprovedWorkloadGate
 {
     bool IsApproved();
+
+    /// <summary>
+    /// Evaluate the exact context supplied by the owning root transaction.
+    /// Legacy implementations deny until they explicitly implement this path.
+    /// The parameterless method must never be used as a fallback.
+    /// </summary>
+    bool IsApproved(ApprovedWorkloadEvaluationContext context) => false;
 }

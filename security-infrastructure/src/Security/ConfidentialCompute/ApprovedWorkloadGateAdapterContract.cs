@@ -76,13 +76,14 @@ namespace IMortal.TrustBroker.Security.ConfidentialCompute;
 /// success unless that success was established from the exact trusted
 /// evidence associated with the same root authorization evaluation.
 ///
-/// The current parameterless IApprovedWorkloadGate.IsApproved() contract
-/// MUST NOT be bridged by ambient mutable state.
+/// The legacy parameterless IApprovedWorkloadGate.IsApproved() contract
+/// MUST NOT be bridged by ambient mutable state or used as a fallback.
 ///
-/// Before a real approving implementation can replace
-/// DenyAllApprovedWorkloadGate, the adapter/root contract must provide a
-/// structurally transaction-bound method of supplying the authoritative
-/// evaluation context.
+/// The root now creates a fresh evaluation request and accepts only the context
+/// bound to that exact request. Its context-bearing gate call supplies all four
+/// inputs. Before a real producer can replace the deny-only default, its evidence
+/// acquisition, independent policy trust, authoritative challenge ownership and
+/// replay lifecycle must be established. The binding itself proves none of these.
 ///
 /// AUTHORITY SEPARATION
 /// ====================

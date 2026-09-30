@@ -16,7 +16,7 @@
       "published": "specification-templates/security-spec/I_MORTAL_EMAIL_RECOVERY_AUTHORITY_V1.conf.example",
       "redactions": {
         "digests": 2,
-        "identities": 1,
+        "identities": 0,
         "paths": 0,
         "deployment_values": 0
       }
@@ -892,6 +892,16 @@
       }
     },
     {
+      "source": "src/Security/ConfidentialCompute/ApprovedWorkloadEvaluationRequest.cs",
+      "published": "src/Security/ConfidentialCompute/ApprovedWorkloadEvaluationRequest.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
       "source": "src/Security/ConfidentialCompute/ApprovedWorkloadGateAdapterContract.cs",
       "published": "src/Security/ConfidentialCompute/ApprovedWorkloadGateAdapterContract.cs",
       "redactions": {
@@ -944,6 +954,16 @@
     {
       "source": "src/Security/ConfidentialCompute/AttestedVerifierProvenance.cs",
       "published": "src/Security/ConfidentialCompute/AttestedVerifierProvenance.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/AuthorizationTransaction.cs",
+      "published": "src/Security/ConfidentialCompute/AuthorizationTransaction.cs",
       "redactions": {
         "digests": 0,
         "identities": 0,
@@ -1122,6 +1142,16 @@
       }
     },
     {
+      "source": "src/Security/ConfidentialCompute/DenyAllApprovedWorkloadContextProducer.cs",
+      "published": "src/Security/ConfidentialCompute/DenyAllApprovedWorkloadContextProducer.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
       "source": "src/Security/ConfidentialCompute/DenyAllApprovedWorkloadGate.cs",
       "published": "src/Security/ConfidentialCompute/DenyAllApprovedWorkloadGate.cs",
       "redactions": {
@@ -1144,6 +1174,16 @@
     {
       "source": "src/Security/ConfidentialCompute/DenyAllUserRuntimeSecurityGate.cs",
       "published": "src/Security/ConfidentialCompute/DenyAllUserRuntimeSecurityGate.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/DeveloperAuthorityTransaction.cs",
+      "published": "src/Security/ConfidentialCompute/DeveloperAuthorityTransaction.cs",
       "redactions": {
         "digests": 0,
         "identities": 0,
@@ -1254,6 +1294,16 @@
     {
       "source": "src/Security/ConfidentialCompute/IAmdSevSnpCryptographicVerifier.cs",
       "published": "src/Security/ConfidentialCompute/IAmdSevSnpCryptographicVerifier.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IApprovedWorkloadContextProducer.cs",
+      "published": "src/Security/ConfidentialCompute/IApprovedWorkloadContextProducer.cs",
       "redactions": {
         "digests": 0,
         "identities": 0,
@@ -1504,6 +1554,16 @@
     {
       "source": "src/Security/ConfidentialCompute/IManifestTrustAnchorProvider.cs",
       "published": "src/Security/ConfidentialCompute/IManifestTrustAnchorProvider.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/ConfidentialCompute/IMortalSecurityUmbrellaRoot.Foundation.cs",
+      "published": "src/Security/ConfidentialCompute/IMortalSecurityUmbrellaRoot.Foundation.cs",
       "redactions": {
         "digests": 0,
         "identities": 0,
@@ -2372,6 +2432,16 @@
       }
     },
     {
+      "source": "src/Security/ConfidentialCompute/TransactionBoundApprovedWorkloadGate.cs",
+      "published": "src/Security/ConfidentialCompute/TransactionBoundApprovedWorkloadGate.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
       "source": "src/Security/ConfidentialCompute/TrustedProducerContext.cs",
       "published": "src/Security/ConfidentialCompute/TrustedProducerContext.cs",
       "redactions": {
@@ -2722,6 +2792,26 @@
       }
     },
     {
+      "source": "src/Security/Provisioning/ProtectedRecordAccess.cs",
+      "published": "src/Security/Provisioning/ProtectedRecordAccess.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/Provisioning/SafeSecurityDiagnostic.cs",
+      "published": "src/Security/Provisioning/SafeSecurityDiagnostic.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
       "source": "src/Security/SecurityEnrollmentInvariants.cs",
       "published": "src/Security/SecurityEnrollmentInvariants.cs",
       "redactions": {
@@ -2764,6 +2854,106 @@
     {
       "source": "src/Security/SecurityPolicyReference.cs",
       "published": "src/Security/SecurityPolicyReference.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/Sensors/IncidentBoundaries.cs",
+      "published": "src/Security/Sensors/IncidentBoundaries.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/Sensors/ProtectedNotificationEnrollment.cs",
+      "published": "src/Security/Sensors/ProtectedNotificationEnrollment.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/Sensors/ProtectedUserRegistry.cs",
+      "published": "src/Security/Sensors/ProtectedUserRegistry.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/Sensors/SecuritySensorCoordinator.cs",
+      "published": "src/Security/Sensors/SecuritySensorCoordinator.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/Sensors/SensorBoundaries.cs",
+      "published": "src/Security/Sensors/SensorBoundaries.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/Sensors/SensorEvidence.cs",
+      "published": "src/Security/Sensors/SensorEvidence.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/Sensors/SensorPolicy.cs",
+      "published": "src/Security/Sensors/SensorPolicy.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/Sensors/SensorTelemetry.cs",
+      "published": "src/Security/Sensors/SensorTelemetry.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/Sensors/SensorTelemetryAdapters.cs",
+      "published": "src/Security/Sensors/SensorTelemetryAdapters.cs",
+      "redactions": {
+        "digests": 0,
+        "identities": 0,
+        "paths": 0,
+        "deployment_values": 0
+      }
+    },
+    {
+      "source": "src/Security/Sensors/SourceIntegritySensor.cs",
+      "published": "src/Security/Sensors/SourceIntegritySensor.cs",
       "redactions": {
         "digests": 0,
         "identities": 0,

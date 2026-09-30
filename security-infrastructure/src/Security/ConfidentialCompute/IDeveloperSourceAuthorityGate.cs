@@ -18,4 +18,7 @@ public interface IDeveloperSourceAuthorityGate
 {
     bool IsSatisfied(
         DeveloperSourceAuthorityMode mode);
+
+    /// <summary>Legacy mode-only implementations cannot approve the transaction path.</summary>
+    bool IsSatisfied(DeveloperAuthorityContext context) => false;
 }

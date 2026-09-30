@@ -6,6 +6,9 @@ interfaces and original conformance tests. This is development infrastructure:
 production authorization and protected provider operations remain disabled.
 A complete source snapshot does not mean a complete or certified TEE system.
 
+Current progress and remaining dependencies are maintained in
+[inspection and validation](docs/security-infrastructure.md#current-progress--2026-09-30).
+
 ## Source map
 
 | Directory | Contents |
@@ -13,6 +16,8 @@ A complete source snapshot does not mean a complete or certified TEE system.
 | `security-infrastructure/src/Security/ConfidentialCompute` | TEE root gates, Intel TDX / AMD SEV-SNP evidence contracts, integrity, custody, recovery, protected-state interfaces, device identity and challenge algorithms |
 | `security-infrastructure/src/Providers` | Windows/Linux TPM and Apple/Android provider boundaries; protected operations return denial |
 | `security-infrastructure/src/Mobile` | Android/iOS evidence mapping and native probe contracts |
+| `security-infrastructure/src/Security/Sensors` | Platform/user security reporting, inventory comparison and telemetry contracts |
+| `security-infrastructure/src/Security/Provisioning` | Protected-record access, scoped receipts and restricted diagnostics |
 | `security-infrastructure/src/Security` | Enrollment, identity derivation, production runtime and startup gates |
 | `security-infrastructure/src/Tests` | Original conformance sources, sanitized; some require private deployment fixtures or Windows |
 | `security-infrastructure/specification-templates` | Sanitized design contracts, for reading only; these are not valid deployment policies |

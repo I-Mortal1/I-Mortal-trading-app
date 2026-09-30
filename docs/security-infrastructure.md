@@ -14,7 +14,9 @@ application and conformance `.cs` / `.csproj` files. Backups are excluded.
   vendor attestation service by themselves.
 - `IMortalSecurityUmbrellaRoot` composes confidential-compute, approved workload,
   user-runtime and developer-custody gates. Its caller must supply production
-  authorization from a separately protected policy. Interfaces and descriptive
+  authorization from a separately protected policy. Transaction-bound evaluation
+  now shares one issuance across TEE, workload and developer checks, and requires
+  lifecycle commit before approval; the default lifecycle denies all requests. Interfaces and descriptive
   evidence flags do not themselves establish that trusted provenance.
 - `Program` retains its disabled production switch. `ProductionRuntimeGate`
   distinguishes contract verification from permission to operate. The sanitized
@@ -29,6 +31,24 @@ application and conformance `.cs` / `.csproj` files. Backups are excluded.
   not invent storage engines, signature verifiers or trusted hardware producers.
 - Test-only protected-operation seams model behavior with fakes. Passing those
   tests would not establish production crash consistency or hardware security.
+
+## Current progress — 2026-09-30
+
+The refreshed export adds 19 C# files and updates the existing authorization gates.
+The working application source inventory is checked against the reviewed export
+inputs; generated build files, backups and separate experiments are excluded.
+
+| Area | Implemented in source | Remaining dependency / verification boundary |
+| --- | --- | --- |
+| Authorization foundation | Request-owned workload contexts, shared issuance, scoped intent, developer USB/recovery orchestration and commit-before-approval flow | Independently authenticated TEE evidence, durable issuance/replay authority, protected enrollment and real proof providers |
+| Security sensors | Separate platform/user reporting, evidence freshness and scope checks, source inventory comparison, telemetry adapters, audit and notification interfaces | Real acquisition feeds, signed policy/manifest verification, durable incident storage and delivery providers |
+| Protected records | Authorization-before-resolution, receipt scope/version/expiry checks, protected notification references and restricted diagnostic output | Provisioned record store, independent trust anchors, key operations and external service implementations |
+| Trading application | Security telemetry contracts describe trading activity and withdrawal observations | No trading UI, exchange execution integration or end-to-end trading workflow is present in this snapshot |
+
+These additions compile with the application. The public regression suites cover
+publication behavior and the existing utility components; they do not establish
+behavioral coverage of every new authorization, sensor or provisioning path.
+Local experimental harnesses are outside the published test inventory.
 
 ## Verification commands
 
@@ -59,10 +79,10 @@ out of source before publication. Never replace missing trust anchors with value
 derived from the very data being authenticated, and never enable production merely
 to make a public example run.
 
-## Validation of this publication
+## Validation of this publication (2026-09-30)
 
-The prepared snapshot contains 239 C# files, two project definitions and 57 design
-templates. Export records show 208 digest redactions, one identity redaction,
+The prepared snapshot contains 258 C# files, two project definitions and 57 design
+templates. Export records show 208 digest redactions, zero identity redactions,
 14 path redactions and 18 deployment-field redactions. Application and public
 harness builds completed with zero warnings and errors.
 

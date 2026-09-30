@@ -14,22 +14,39 @@ namespace IMortal.TrustBroker.Security.ConfidentialCompute;
 /// IMPORTANT:
 /// The current composition remains intentionally non-production-authorized.
 /// </summary>
-public sealed class IMortalSecurityUmbrellaRoot
+public sealed partial class IMortalSecurityUmbrellaRoot
 {
     private readonly RootConfidentialComputeGate _confidentialComputeGate;
     private readonly IApprovedWorkloadGate _approvedWorkloadGate;
     private readonly IUserRuntimeSecurityGate _userRuntimeSecurityGate;
     private readonly IDeveloperSourceAuthorityGate _developerSourceAuthorityGate;
 
+    private readonly ISecurityClock _securityClock;
+    private readonly IApprovedWorkloadContextProducer _approvedWorkloadContextProducer;
     public IMortalSecurityUmbrellaRoot(
         RootConfidentialComputeGate confidentialComputeGate,
         IApprovedWorkloadGate approvedWorkloadGate,
         IUserRuntimeSecurityGate userRuntimeSecurityGate,
-        IDeveloperSourceAuthorityGate developerSourceAuthorityGate)
+        IDeveloperSourceAuthorityGate developerSourceAuthorityGate,
+        ISecurityClock securityClock)
+        : this(confidentialComputeGate, approvedWorkloadGate, userRuntimeSecurityGate,
+            developerSourceAuthorityGate, securityClock, null)
+    {
+    }
+
+    public IMortalSecurityUmbrellaRoot(
+        RootConfidentialComputeGate confidentialComputeGate,
+        IApprovedWorkloadGate approvedWorkloadGate,
+        IUserRuntimeSecurityGate userRuntimeSecurityGate,
+        IDeveloperSourceAuthorityGate developerSourceAuthorityGate,
+        ISecurityClock securityClock,
+        IApprovedWorkloadContextProducer? approvedWorkloadContextProducer)
     {
         _confidentialComputeGate =
             confidentialComputeGate ??
-            throw new ArgumentNullException(nameof(confidentialComputeGate));
+            throw new ArgumentNullException(
+        nameof(confidentialComputeGate)
+    );
 
         _approvedWorkloadGate =
             approvedWorkloadGate ??
@@ -42,6 +59,9 @@ public sealed class IMortalSecurityUmbrellaRoot
         _developerSourceAuthorityGate =
             developerSourceAuthorityGate ??
             throw new ArgumentNullException(nameof(developerSourceAuthorityGate));
+        _securityClock = securityClock ?? throw new ArgumentNullException(nameof(securityClock));
+        _approvedWorkloadContextProducer = approvedWorkloadContextProducer ??
+            new DenyAllApprovedWorkloadContextProducer();
     }
 
     /// <summary>
@@ -52,140 +72,16 @@ public sealed class IMortalSecurityUmbrellaRoot
     /// </summary>
     public UmbrellaRootAuthorizationResult Evaluate(
         UmbrellaSecurityDomain domain,
-        DateTimeOffset now,
         bool productionAuthorized,
         DeveloperSourceAuthorityMode developerAuthorityMode =
-            DeveloperSourceAuthorityMode.None)
+            DeveloperSourceAuthorityMode.None
+    )
     {
-        // Absolute production kill switch.
-        if (!productionAuthorized)
-        {
-            return Deny(
-                UmbrellaRootDenialReason.ProductionDisabled);
-        }
-
-        if (domain is not
-            (UmbrellaSecurityDomain.UserRuntime or
-             UmbrellaSecurityDomain.DeveloperSourceCustody))
-        {
-            return Deny(
-                UmbrellaRootDenialReason.InvalidSecurityDomain);
-        }
-
-        RootConfidentialComputeGateResult rootResult;
-
-        try
-        {
-            rootResult =
-                _confidentialComputeGate.Evaluate(
-                    now,
-                    productionContext: true);
-        }
-        catch
-        {
-            return Deny(
-                UmbrellaRootDenialReason.SecurityDependencyFailure);
-        }
-
-        if (rootResult.State != RootConfidentialComputeState.Satisfied)
-        {
-            return Deny(
-                UmbrellaRootDenialReason.RootConfidentialComputeGateDenied);
-        }
-
-        bool approvedWorkload;
-
-        try
-        {
-            approvedWorkload =
-                _approvedWorkloadGate.IsApproved();
-        }
-        catch
-        {
-            return Deny(
-                UmbrellaRootDenialReason.SecurityDependencyFailure);
-        }
-
-        if (!approvedWorkload)
-        {
-            return Deny(
-                UmbrellaRootDenialReason.ApprovedWorkloadDenied);
-        }
-
-        switch (domain)
-        {
-            case UmbrellaSecurityDomain.UserRuntime:
-            {
-                // Finished-app users never enter the developer source
-                // authority branch.
-                if (developerAuthorityMode !=
-                    DeveloperSourceAuthorityMode.None)
-                {
-                    return Deny(
-                        UmbrellaRootDenialReason
-                            .UserRuntimeSourceAuthorityForbidden);
-                }
-
-                bool userRuntimeSatisfied;
-
-                try
-                {
-                    userRuntimeSatisfied =
-                        _userRuntimeSecurityGate.IsSatisfied();
-                }
-                catch
-                {
-                    return Deny(
-                        UmbrellaRootDenialReason.SecurityDependencyFailure);
-                }
-
-                if (!userRuntimeSatisfied)
-                {
-                    return Deny(
-                        UmbrellaRootDenialReason.SecurityDependencyFailure);
-                }
-
-                return UmbrellaRootAuthorizationResult.Satisfied();
-            }
-
-            case UmbrellaSecurityDomain.DeveloperSourceCustody:
-            {
-                if (developerAuthorityMode is not
-                    (DeveloperSourceAuthorityMode.NormalUsb or
-                     DeveloperSourceAuthorityMode.UsbUnavailableEmailRecovery))
-                {
-                    return Deny(
-                        UmbrellaRootDenialReason
-                            .UnsupportedDeveloperAuthorityMode);
-                }
-
-                bool developerAuthoritySatisfied;
-
-                try
-                {
-                    developerAuthoritySatisfied =
-                        _developerSourceAuthorityGate.IsSatisfied(
-                            developerAuthorityMode);
-                }
-                catch
-                {
-                    return Deny(
-                        UmbrellaRootDenialReason.SecurityDependencyFailure);
-                }
-
-                if (!developerAuthoritySatisfied)
-                {
-                    return Deny(
-                        UmbrellaRootDenialReason.DeveloperAuthorityDenied);
-                }
-
-                return UmbrellaRootAuthorizationResult.Satisfied();
-            }
-
-            default:
-                return Deny(
-                    UmbrellaRootDenialReason.InvalidSecurityDomain);
-        }
+        // Legacy callers lack operation, identity version and authoritative lifecycle.
+        // Retain the signature but never manufacture those prerequisites.
+        return Deny(productionAuthorized
+            ? UmbrellaRootDenialReason.SecurityDependencyFailure
+            : UmbrellaRootDenialReason.ProductionDisabled);
     }
 
     private static UmbrellaRootAuthorizationResult Deny(
