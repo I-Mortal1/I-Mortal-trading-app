@@ -3,6 +3,7 @@
   ".gitignore",
   "NuGet.Config",
   "README.md",
+  "docs/project-brief.md",
   "docs/publication-files.json",
   "docs/publication-scope.md",
   "docs/security-infrastructure.md",

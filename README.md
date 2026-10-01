@@ -1,13 +1,23 @@
 # I-Mortal trading app — security infrastructure
 
-Public, sanitized source snapshot of the current TrustBroker security project.
-All current C# source and project definitions are included, including unfinished
-interfaces and original conformance tests. This is development infrastructure:
-production authorization and protected provider operations remain disabled.
-A complete source snapshot does not mean a complete or certified TEE system.
+I-Mortal is building the security foundation for a trading application. The current
+project is a .NET 10 TrustBroker covering confidential-compute authorization,
+workload integrity, hardware-aware device identity, security sensors, protected
+records, and replay/recovery designs. Production authorization and protected
+provider operations remain disabled. A trading UI and exchange execution workflow
+are not yet implemented.
 
-Current progress and remaining dependencies are maintained in
-[inspection and validation](docs/security-infrastructure.md#current-progress--2026-09-30).
+**[Read the detailed project brief and architecture schematics](docs/project-brief.md)**
+
+The brief includes system and startup diagrams, request-bound authorization and
+attestation flows, device identity, a conceptual account schema, replay/crash
+ordering, protected-state boundaries, sensor pipelines, protected-record access,
+and the publication workflow. It distinguishes implemented code from designs and
+missing production services.
+
+Reviewed **2026-10-01**: 258 application/conformance C# files, two project definitions,
+and 57 sanitized design templates. The public checks pass; their scope and the
+remaining dependencies are documented in [inspection and validation](docs/security-infrastructure.md).
 
 ## Source map
 

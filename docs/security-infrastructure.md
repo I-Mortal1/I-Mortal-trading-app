@@ -1,92 +1,82 @@
 # Inspection findings and validation boundaries
 
-The workspace contains a .NET TrustBroker executable project, its conformance
-project, security contracts, local experiments, audit evidence, compiled binaries
-and an earlier public utility repository. The public export includes all current
-application and conformance `.cs` / `.csproj` files. Backups are excluded.
+**Reviewed 2026-10-01. Production operations remain disabled.**
 
-## Architecture and implementation status
+The detailed current description is the [project brief and architecture schematics](project-brief.md).
+It covers the common security infrastructure and ordinary-user path with explicit
+implementation status, source references, data flows, and remaining dependencies.
 
-- `RootConfidentialComputeGate` evaluates origin, supported confidential-compute
-  platform, boundary presence, attestation freshness, an injected attestation
-  verifier and measurement policy. Intel TDX / AMD SEV-SNP verification dependencies
-  include interfaces and evidence records; these do not implement a complete
-  vendor attestation service by themselves.
-- `IMortalSecurityUmbrellaRoot` composes confidential-compute, approved workload,
-  user-runtime and developer-custody gates. Its caller must supply production
-  authorization from a separately protected policy. Transaction-bound evaluation
-  now shares one issuance across TEE, workload and developer checks, and requires
-  lifecycle commit before approval; the default lifecycle denies all requests. Interfaces and descriptive
-  evidence flags do not themselves establish that trusted provenance.
-- `Program` retains its disabled production switch. `ProductionRuntimeGate`
-  distinguishes contract verification from permission to operate. The sanitized
-  embedded digest is deliberately invalid, and the deployment path is removed.
-- Windows/Linux providers contain hardware detection code. Detection is not
-  attestation. Enrollment, authorization, signing, attestation and revocation
-  methods return disabled-operation results. macOS readiness is incomplete;
-  mobile adapters depend on native evidence producers.
-- Custody, USB/VeraCrypt, project integrity, protected-state durability/recovery,
-  replay and user/device proof-of-possession code includes contracts, interfaces,
-  predicates and serializers. The export preserves their current state; it does
-  not invent storage engines, signature verifiers or trusted hardware producers.
-- Test-only protected-operation seams model behavior with fakes. Passing those
-  tests would not establish production crash consistency or hardware security.
+## Current progress — 2026-10-01
+
+The current source snapshot contains 258 C# files: 239 runtime files and 19 original
+conformance files, plus two project definitions and 57 sanitized design templates.
+Runtime source contains 15,621 lines including comments and blank lines. These
+counts exclude generated files, backups, independent probes, and binaries.
+
+The authorization foundation shares one issuance across TEE and workload checks,
+checks request ownership, and requires lifecycle commit before approval. Its legacy
+evaluation overload always denies, and the default lifecycle denies issuance and
+commit. Production evidence services and durable lifecycle infrastructure remain
+missing. Program.Main does not instantiate the authorization root.
+
+The source also implements separate platform/user sensor orchestration, source
+inventory comparison, asset-movement correlation, protected notification reference
+resolution, and protected-record receipt checks. Real acquisition, independent
+monitoring, durable incident storage, delivery, and record/key providers remain
+external dependencies. There is no trading UI or exchange execution integration.
+
+The protected-operation test seam currently returns predetermined fault-point
+results, retains restart state in memory, and leaves reconciliation as a stub.
+It does not establish production persistence or crash recovery.
 
 ## Current progress — 2026-09-30
 
-The refreshed export adds 19 C# files and updates the existing authorization gates.
-The working application source inventory is checked against the reviewed export
-inputs; generated build files, backups and separate experiments are excluded.
-
-| Area | Implemented in source | Remaining dependency / verification boundary |
-| --- | --- | --- |
-| Authorization foundation | Request-owned workload contexts, shared issuance, scoped intent, developer USB/recovery orchestration and commit-before-approval flow | Independently authenticated TEE evidence, durable issuance/replay authority, protected enrollment and real proof providers |
-| Security sensors | Separate platform/user reporting, evidence freshness and scope checks, source inventory comparison, telemetry adapters, audit and notification interfaces | Real acquisition feeds, signed policy/manifest verification, durable incident storage and delivery providers |
-| Protected records | Authorization-before-resolution, receipt scope/version/expiry checks, protected notification references and restricted diagnostic output | Provisioned record store, independent trust anchors, key operations and external service implementations |
-| Trading application | Security telemetry contracts describe trading activity and withdrawal observations | No trading UI, exchange execution integration or end-to-end trading workflow is present in this snapshot |
-
-These additions compile with the application. The public regression suites cover
-publication behavior and the existing utility components; they do not establish
-behavioral coverage of every new authorization, sensor or provisioning path.
-Local experimental harnesses are outside the published test inventory.
+This heading is retained for earlier incoming links. The current review and
+[implementation matrix](project-brief.md#project-inventory-and-implementation-status)
+supersede the earlier summary. Historical observations must be evaluated against
+the source version they actually inspected.
 
 ## Verification commands
 
-`python3 tools/check.py` validates the public file inventory and sensitive-value
-patterns, checks the original utility copies against the full source snapshot,
-runs algorithm-policy and byte-exact serialization regression suites, and runs
-public export checks covering invalid trust anchors and disabled provider operations.
-The full application is compiled as a dependency of the public export checks with
-self-contained publishing and trimming disabled. This does not change the archived
-application project definition.
+```sh
+python3 tools/check.py
+python3 tools/export_security.py --source /path/to/private/TrustBroker --check
+```
 
-Original conformance files are preserved for source completeness. They include
-Windows-only expectations, private-policy pins, deployment paths, historical red
-tests and an already-excluded earlier enrollment suite. They are not all portable,
-and their successful execution is not claimed. The public checks do not exercise
-real TPMs, Secure Enclaves, TDX/SNP hardware, production storage or trading.
+The first command checks the publication allowlist and sensitive-value patterns,
+checks the six utility copies against exported source, builds portable harnesses
+and the application dependency, and runs selected regression checks. The second
+requires the private workspace and compares exact regenerated export bytes.
+
+## Validation of this publication — 2026-10-01
+
+- Exact regeneration: PASS, 318 generated source/project/template/manifest files.
+- Exporter regression tests: PASS, 5 tests.
+- Public export behavior: PASS, 31 checks.
+- Algorithm policy: PASS, 17,972 input pairs across four cultures.
+- Challenge serialization: PASS, 9 independent vectors and 11 rejection cases.
+- Public compilation and release checks: PASS.
+
+These results establish only the behaviors tested. The original MSTest suite was
+inspected but was not represented as fully passing: it includes deployment-bound
+fixtures, Windows assumptions, removed private values, excluded enrollment tests,
+and unfinished/red tests. The portable harness builds disable self-contained
+publishing, trimming, and single-file output; they do not test a trimmed release.
+No native hardware, live authentication, production storage, or trading workflow
+was exercised. Historical probe baseline mismatches remain separate unresolved
+lineage evidence; baseline expectations were not silently replaced.
 
 ## Maintaining the snapshot
 
-`tools/export-inputs.json` is the reviewed input inventory.
-`security-infrastructure/export-manifest.json` maps every input to an output and
-records only how many values were redacted. `--check` regenerates in memory and
-compares exact bytes, without writing source hashes into the repository.
+`tools/export-inputs.json` is the reviewed source inventory.
+`security-infrastructure/export-manifest.json` maps inputs to outputs and records
+redaction counts. `docs/publication-files.json` covers all reviewed public files,
+including documentation. The exporter compares source/template bytes; it does
+not independently verify prose claims or make missing infrastructure operational.
 
-Update the private implementation first, rerun the export, inspect the public diff
-and execute the public checks. Newly introduced secrets must be removed or moved
-out of source before publication. Never replace missing trust anchors with values
-derived from the very data being authenticated, and never enable production merely
-to make a public example run.
-
-## Validation of this publication (2026-09-30)
-
-The prepared snapshot contains 258 C# files, two project definitions and 57 design
-templates. Export records show 208 digest redactions, zero identity redactions,
-14 path redactions and 18 deployment-field redactions. Application and public
-harness builds completed with zero warnings and errors.
-
-The public checks passed: five exporter regression tests, 31 denial/verification
-behavior checks, 17,972 algorithm input pairs, nine independent serialization
-vectors and 11 rejection cases. Exact regeneration comparison also passed.
-These counts describe this snapshot and should be refreshed after future changes.
+Update the implementation, deliberately review inventory changes, regenerate the
+export, update the brief to match the source, review the diff, and run the checks.
+New secrets must be removed before publication. Public-content scanning is a
+heuristic, not proof that arbitrary new content is safe to publish. Sanitized
+specification templates are documentation and cannot serve as authenticated
+production policies. See [publication scope](publication-scope.md).
